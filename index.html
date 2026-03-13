@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CASECRAFT — Premium Phone Cases</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-logo">CASECRAFT</div>
+    <div class="nav-links">
+      <a href="#">Shop</a>
+      <a href="#">Collections</a>
+      <a href="#">About</a>
+    </div>
+    <div class="nav-cart">
+      <span>Cart (0)</span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-sub">NEW COLLECTION 2025</p>
+      <h1 class="hero-title">
+        <span class="line">WEAR YOUR</span>
+        <span class="line accent">PHONE.</span>
+      </h1>
+      <p class="hero-desc">Ultra-premium cases forged from aerospace-grade materials. Built for those who refuse to compromise.</p>
+      <div class="hero-cta">
+        <button class="btn-primary">Shop Now</button>
+        <button class="btn-ghost">Explore 3D →</button>
+      </div>
+    </div>
+
+    <!-- THREE.js Canvas -->
+    <div class="canvas-container" id="canvasContainer">
+      <canvas id="heroCanvas"></canvas>
+      <div class="canvas-label">
+        <span class="label-dot"></span>
+        Drag to rotate
+      </div>
+    </div>
+
+    <!-- Floating Stats -->
+    <div class="stat stat-1">
+      <span class="stat-num">48K</span>
+      <span class="stat-label">Happy Customers</span>
+    </div>
+    <div class="stat stat-2">
+      <span class="stat-num">99%</span>
+      <span class="stat-label">Drop Protection</span>
+    </div>
+  </section>
+
+  <!-- Scrolling Ticker -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>FREE SHIPPING ON ORDERS OVER ₹999</span>
+      <span>•</span>
+      <span>MILITARY-GRADE DROP PROTECTION</span>
+      <span>•</span>
+      <span>SCRATCH-RESISTANT COATING</span>
+      <span>•</span>
+      <span>WIRELESS CHARGING COMPATIBLE</span>
+      <span>•</span>
+      <span>FREE SHIPPING ON ORDERS OVER ₹999</span>
+      <span>•</span>
+      <span>MILITARY-GRADE DROP PROTECTION</span>
+      <span>•</span>
+      <span>SCRATCH-RESISTANT COATING</span>
+      <span>•</span>
+      <span>WIRELESS CHARGING COMPATIBLE</span>
+      <span>•</span>
+    </div>
+  </div>
+
+  <!-- Featured Products -->
+  <section class="products" id="products">
+    <div class="products-header">
+      <p class="section-tag">— BESTSELLERS</p>
+      <h2 class="section-title">THE COLLECTION</h2>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card" data-color="#1a1a2e" data-name="Midnight Armor">
+        <div class="product-canvas-wrap">
+          <canvas class="product-canvas" data-index="0"></canvas>
+        </div>
+        <div class="product-info">
+          <div class="product-colors">
+            <span class="color-dot" style="background:#1a1a2e" data-color="#1a1a2e"></span>
+            <span class="color-dot" style="background:#16213e" data-color="#16213e"></span>
+            <span class="color-dot" style="background:#0f3460" data-color="#0f3460"></span>
+          </div>
+          <h3 class="product-name">Midnight Armor</h3>
+          <p class="product-sub">Ultra-thin · Military Grade</p>
+          <div class="product-footer">
+            <span class="product-price">₹1,299</span>
+            <button class="add-btn">Add +</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card featured" data-color="#e8c547" data-name="Chrome Strike">
+        <div class="product-badge">BESTSELLER</div>
+        <div class="product-canvas-wrap">
+          <canvas class="product-canvas" data-index="1"></canvas>
+        </div>
+        <div class="product-info">
+          <div class="product-colors">
+            <span class="color-dot" style="background:#e8c547" data-color="#e8c547"></span>
+            <span class="color-dot" style="background:#c0c0c0" data-color="#c0c0c0"></span>
+            <span class="color-dot" style="background:#b87333" data-color="#b87333"></span>
+          </div>
+          <h3 class="product-name">Chrome Strike</h3>
+          <p class="product-sub">Metallic Finish · MagSafe</p>
+          <div class="product-footer">
+            <span class="product-price">₹1,799</span>
+            <button class="add-btn">Add +</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-color="#2d6a4f" data-name="Forest Matte">
+        <div class="product-canvas-wrap">
+          <canvas class="product-canvas" data-index="2"></canvas>
+        </div>
+        <div class="product-info">
+          <div class="product-colors">
+            <span class="color-dot" style="background:#2d6a4f" data-color="#2d6a4f"></span>
+            <span class="color-dot" style="background:#40916c" data-color="#40916c"></span>
+            <span class="color-dot" style="background:#1b4332" data-color="#1b4332"></span>
+          </div>
+          <h3 class="product-name">Forest Matte</h3>
+          <p class="product-sub">Frosted · Grip-Tech</p>
+          <div class="product-footer">
+            <span class="product-price">₹1,499</span>
+            <button class="add-btn">Add +</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="features-left">
+      <p class="section-tag">— WHY CASECRAFT</p>
+      <h2 class="features-title">ENGINEERED FOR<br/><em>PERFECTION</em></h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-icon">◈</div>
+          <div>
+            <h4>Aerospace Polycarbonate</h4>
+            <p>Same material used in aircraft cockpit canopies. Virtually indestructible.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">◈</div>
+          <div>
+            <h4>Nano-Grip Technology</h4>
+            <p>Microstructured surface provides 3× better grip without bulk or tackiness.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">◈</div>
+          <div>
+            <h4>Zero-Compromise Fit</h4>
+            <p>Precision-machined to 0.1mm tolerance. Every button, port, perfectly aligned.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="features-right">
+      <canvas id="featureCanvas"></canvas>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">CASECRAFT</div>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">Pinterest</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CaseCraft. All rights reserved.</p>
+      <p>Privacy · Terms · Returns</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
